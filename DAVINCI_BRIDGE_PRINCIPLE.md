@@ -1,137 +1,76 @@
-# Da Vinci Bridge Principle: Verifiable Structures
+# Da Vinci Bridge Principle: Mathematical Trunk Assembly
 
-**Status:** Adopted research-design principle; formal model provisional.  
-**Scope:** Mathematical proofs, scientific arguments, historical investigations, and other evidence-based claims.
+**Status:** Adopted research method; operational details remain under test.  
+**Scope:** Mathematical proof construction from independently established results.
 
 ## 1. Principle
 
-A complex argument should not be treated as an indivisible mass of reasoning. It should be decomposable into identifiable units. Each unit has a precise claim, stated conditions, supporting justification, dependencies, and a verification status.
+A mathematical trunk is a result that already stands on its own: a theorem, lemma, identity, principle, or property with a valid proof and explicit conditions. It is not an unfinished task, software module, contract, or dependency placeholder.
 
-The decomposition is not enough. The units must be connected through an explicit architecture that makes dependencies, consistency constraints, corroboration, and unresolved gaps inspectable.
+The Da Vinci Bridge investigates whether independently justified trunks can be assembled, under compatible conditions, into a conclusion that none of them supplies alone.
 
-If one unit fails, the structure should make it possible to identify which conclusions depended on it, which conclusions remain supported, and whether an alternative justification exists.
+**The discovery is in the assembly, not necessarily in inventing the trunks.**
 
-**No monoliths: verifiable structures.**
-
-## 2. Historical image
-
-The metaphor refers to the reciprocal interlocking-post bridge represented in Leonardo da Vinci's notebooks in the late fifteenth century. It does **not** refer to Leonardo's separate 1502 proposal to Sultan Bayezid II for a large single-arch bridge across the Golden Horn.
-
-The engineering image is an analogy for structural interdependence, not a claim that logical proof works by physical compression or friction.
-
-## 3. A unit of verification
-
-A first-pass representation for an argument unit is:
+## 2. Schematic form
 
 \[
-T_i = (P_i, E_i, D_i, S_i)
+(P_1\land P_2\land\cdots\land P_r)\land C\Longrightarrow H,
 \]
 
-where:
+where each \(P_i\) is an independently established result, \(C\) contains the compatibility conditions and target-specific construction, and \(H\) is the conclusion. This is a schema only; every actual proof must state its quantifiers, domains, hypotheses, definitions, and inference steps.
 
-- \(P_i\): the proposition or claim made by unit \(i\).
-- \(E_i\): the evidence, derivation, proof object, data, or source supporting it.
-- \(D_i\): the explicitly identified dependencies of the unit.
-- \(S_i\): its verification status.
+## 3. Independence
 
-Suggested statuses:
+Each trunk must have a proof that does not assume the target \(H\), an equivalent unproved reformulation of \(H\), or a result whose justification depends on \(H\).
 
-- **VERIFIED:** the stated obligation has been checked under its declared method and scope.
-- **PENDING:** required checking or evidence is incomplete.
-- **REFUTED:** a valid counterexample or contradiction defeats the claim as stated.
-- **LIMITED:** support holds only under narrower conditions than the original claim.
-- **UNSUPPORTED:** no adequate justification is currently available.
+Trunks may have their own prerequisites. Those prerequisites and the conditions under which each trunk applies must be documented. Independence from the target is not the same as having no mathematical relationships with other results.
 
-A status must always be interpreted relative to a declared verification method. For example, a proof checked by a formal kernel, a derivation reviewed by mathematicians, and a historical claim supported by a primary source are different verification events and must not be conflated.
+## 4. Keep the roles distinct
 
-## 4. The argument structure
+- **Trunk:** an independently justified mathematical result.
+- **Construction:** an object introduced for the target argument.
+- **Connector:** an identity or valid inference that transfers information between representations.
+- **Compatibility condition:** a condition needed to apply a trunk.
+- **Assembly:** the arrangement of trunks, constructions, and connectors.
+- **Target:** the conclusion derived by the complete argument.
 
-A provisional representation is:
+Do not promote a target-specific construction to a proven trunk merely because it is useful.
 
-\[
-\mathcal{B} = (T, D, C)
-\]
+## 5. Required audits
 
-where:
+For every case:
+1. State the target precisely.
+2. Record each trunk's exact statement, domain, hypotheses, proof, source, and limitations.
+3. Verify compatibility before applying it.
+4. expose every connector and construction.
+5. Check for circularity.
+6. Remove each trunk in turn and identify which inference fails.
+7. Search for substitutions and decide whether they change the mechanism or merely rephrase it.
+8. Record counterexamples, failed attempts, and unresolved questions.
 
-- \(T\) is the set of argument units.
-- \(D\) is the set of directed dependency relations between units.
-- \(C\) is the set of consistency checks, cross-checks, constraints, and corroboration relations.
+Removal analysis is relative to the chosen proof architecture. It does not establish absolute logical necessity or minimality.
 
-The dependency relation must preserve logical direction: if unit \(T_j\) is required to justify \(T_i\), that dependency must be recorded explicitly.
+## 6. Outcome labels
 
-For deductive proofs, the dependency graph must not conceal circular justification. A cycle is acceptable only if the formal system explicitly establishes a valid mutually defined construction or another sound rule that licenses it. Otherwise, a cycle is a warning requiring review, not evidence of reciprocal support.
+- **RECONSTRUCTION:** a known result and proof are reorganized into explicit trunks.
+- **NEW_ASSEMBLY:** established trunks are connected through a distinct arrangement or representation.
+- **NEW_DERIVATION:** a valid derivation differs from the selected reference proof; novelty still requires literature review.
+- **NEW_RESULT_CANDIDATE:** the target itself may be new; this requires literature review and independent expert scrutiny.
+- **FAILED_ASSEMBLY:** compatibility or inference fails.
+- **INCONCLUSIVE:** evidence does not settle the classification.
 
-Consistency checks and independent corroboration are not substitutes for proof dependencies. They are additional controls and must be labeled according to what they actually establish.
+An unfamiliar arrangement is not proof of mathematical novelty.
 
-## 5. Failure and removal analysis
+## 7. Historical image
 
-For a selected unit \(T_k\), ask:
+The visual reference is Leonardo da Vinci's reciprocal interlocking-post bridge represented in his late-fifteenth-century notebooks. It is not his separate 1502 proposal for a large single-arch bridge across the Golden Horn.
 
-1. Which claims directly depend on \(T_k\)?
-2. Which downstream claims lose their justification if \(T_k\) is removed?
-3. Which claims remain justified through other paths?
-4. Is there an independent proof, source, measurement, or derivation?
-5. Does any consistency check detect the resulting gap or contradiction?
-6. What is the narrowest conclusion still supported?
+The bridge is an analogy for how independently sound elements may support a larger structure. It does not imply that logical proof operates through physical compression or friction.
 
-This analysis measures **structural dependency and diagnostic capacity**. It does not by itself establish that an argument is true or robust.
+## 8. Guiding statement
 
-## 6. Reciprocity without circularity
+A trunk is not a task pending. It is a truth already supported by its own proof. The research lies in discovering whether independently established results can be assembled into a valid new consequence.
 
-Reciprocity does not mean that proposition A proves B while B, in turn, is used to prove A. That is circular unless a sound formal rule explicitly licenses the construction.
+**No monoliths: mathematical results with their own proofs, assembled through explicit reasoning.**
 
-The useful form of reciprocity is architectural:
-
-- distinct units constrain one another's scope;
-- independent evidence may corroborate a claim;
-- consistency checks expose incompatibilities;
-- alternative derivations can preserve support when one route fails;
-- the structure records exactly which conclusions depend on which units.
-
-## 7. Human legibility and formal verification
-
-Formal proof assistants can check that encoded proof steps satisfy a formal specification. That is a major form of verification. It does not, by itself, settle whether the formalized statement captures the intended informal claim, whether the model's assumptions are appropriate, or whether the overall argument is legible to its intended readers.
-
-A verifiable structure should therefore distinguish at least:
-
-- correctness of formal derivation;
-- adequacy of formalization relative to the intended claim;
-- validity and provenance of assumptions and inputs;
-- dependency traceability;
-- human-readable explanation;
-- failure localization and alternative support.
-
-These dimensions complement one another. They should not be collapsed into a single unqualified VERIFIED label.
-
-## 8. Applications beyond mathematics
-
-The same architecture can organize scientific and historical investigations, provided the units are adapted to the domain.
-
-For a historical fire investigation, for example:
-
-- **Observed damage:** what is documented and by which sources?
-- **Accelerants or contributing conditions:** what evidence supports their presence and role?
-- **Initiation:** what evidence supports a specific origin or initiating event?
-- **Verdict:** what conclusion follows from the evidence, with what limitations?
-
-The verdict is a conclusion derived from the evidence structure, not another evidentiary unit of the same kind. Missing sources remain explicit gaps; they must not be silently replaced by assumptions.
-
-## 9. Limits and open questions
-
-This principle is a research-design proposal, not a theorem that every proof or investigation can be decomposed optimally.
-
-Questions requiring further work include:
-
-- How should unit granularity be selected?
-- How should independence of evidence be assessed?
-- How should shared assumptions and common-mode failure be represented?
-- What metrics, if any, meaningfully quantify diagnostic capacity or structural robustness?
-- How should uncertainty and partial support propagate through the graph?
-- When does a redundant proof path genuinely provide independence rather than duplicate the same hidden assumption?
-
-The model must be tested on concrete cases and revised when it fails to represent them faithfully.
-
-## 10. Historical note
-
-The phrase **“No monoliths: verifiable structures”** names the methodological aspiration. The bridge is a visual analogy; the actual structure must be justified by explicit logic, provenance, and reproducible checks.
+See [Da Vinci Bridge: Mathematical Trunk Assembly](DA_VINCI_BRIDGE_METHOD.md) and the case records in [DA_VINCI_BRIDGE/](DA_VINCI_BRIDGE/).
