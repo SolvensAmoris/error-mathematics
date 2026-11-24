@@ -1,6 +1,15 @@
 # Changelog
 
 ## 2026-11-23 — Da Vinci Bridge research track
+- Added DB-004, the finite-group prefix-return theorem: a sequence of |G| elements in a finite group G contains a nonempty consecutive block whose ordered product is the identity.
+- Verified the argument for non-abelian groups; the proof uses prefix products, finite counting, associativity, and inverses, but not commutativity.
+- Connected DB-004 to DB-002 by identifying the cyclic group Z/nZ as the additive special case.
+- Added a finite-monoid counterexample showing that prefix-product repetition alone is insufficient without inverses.
+- Recorded sharpness of the uniform length bound using a generator repeated m-1 times in C_m.
+- Located a direct published antecedent in Alford, Granville, and Pomerance, Section 2; classified DB-004 as structural generalization/reconstruction, not a new theorem.
+- No independent replacement for finite counting and no mathematical novelty are claimed.
+
+## 2026-11-23 — Da Vinci Bridge research track (initial pilots)
 - Added the mathematical trunk-assembly method and corrected the Da Vinci Bridge principle to reflect the intended research concept: independently proven results assembled under explicit compatibility conditions.
 - Recorded DB-001, a structured reconstruction of Euclid's proof of infinitely many primes, including trunk roles and removal audit. No novelty is claimed.
 - Recorded DB-002, the modular consecutive-segment theorem, both prefix-sum proof variants, and audits of counting, group language, difference cocycles, induction, reflection, and substitution candidates.
