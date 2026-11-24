@@ -34,5 +34,5 @@ Retain raw data, metadata, code, protocol versions, exclusions, failed runs, and
 ## P10. Separate exploration from confirmation
 Exploratory analysis may generate hypotheses. Confirmatory analysis tests hypotheses using criteria fixed before examining the relevant outcomes.
 
-## P11. Verifiable structures, not monoliths
-Complex arguments should be decomposable into identifiable units with explicit claims, evidence or derivations, dependencies, and verification states. Their architecture must expose consistency checks, corroboration, unresolved gaps, and the consequences of removing a unit. Dependency relations must not conceal circular justification. See [Da Vinci Bridge Principle](DAVINCI_BRIDGE_PRINCIPLE.md). This is a methodological design principle, not a claim that every argument has already been shown to admit an optimal decomposition.
+## P11. Independently proven mathematical trunks
+For a Da Vinci Bridge argument, each trunk must be an established mathematical result with its own proof, stated domain, hypotheses, and limitations. The target conclusion must not be used to justify a trunk. The assembly must expose its constructions, connectors, compatibility conditions, and final inference. See [Da Vinci Bridge Principle](DAVINCI_BRIDGE_PRINCIPLE.md). This is a research method, not a claim that a new theorem has already been obtained.
