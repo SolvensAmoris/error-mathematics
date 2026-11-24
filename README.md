@@ -34,7 +34,7 @@ These are working definitions, not claims that all error or failure has one univ
 
 ## Initial research tracks
 - **MIOD-001 (working label):** organization changes in a water system under controlled vibration. MIOD is provisional and is not an established mathematical theory.
-- **Da Vinci Bridge:** mathematical trunk assembly, with pilot cases DB-001 through DB-003.
+- **Da Vinci Bridge:** mathematical trunk assembly, with pilot cases DB-001 through DB-004.
 
 ## Repository map
 - FOUNDATIONS.md: founding research statement.
@@ -55,4 +55,4 @@ These are working definitions, not claims that all error or failure has one univ
 ## Research integrity
 A hypothesis is not evidence. A simulation is not a physical observation. Correlation does not by itself establish causation. A measurement is conditional on instrument, calibration, procedure, and model. Preserve raw observations and record exclusions and deviations.
 
-No new universal law has been established. Formal definitions, operational measures, preregistered criteria, and reproducible results are pending. The DB-001 and DB-002 cases reconstruct known theorems; DB-003 records a valid consequence of an established theorem and a counterexample to a stronger conjecture. No mathematical novelty is claimed.
+No new universal law has been established. Formal definitions, operational measures, preregistered criteria, and reproducible results are pending. DB-001 and DB-002 reconstruct known theorems; DB-003 records a valid orbit consequence and a counterexample to a stronger conjecture; DB-004 records a known finite-group extension of the modular prefix-sum argument and identifies the role of inverses. No mathematical novelty is claimed.
