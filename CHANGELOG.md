@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-25 — MIOD-001 synthetic indicator pilot
+- Added `EXPERIMENTS/MIOD-001-WATER/SYNTHETIC/` with a reproducible NumPy implementation of Pearson correlation and biased sample distance correlation, synthetic generators C0-C6, same-DGP null calibration, held-out evaluation, confusion metrics, and unit tests.
+- Corrected C6 to compare two distinct even nonlinear mechanisms, X² and X⁴, whose population Pearson correlations with symmetric X are zero; dCor is evaluated rather than assumed to distinguish them.
+- Calibrated thresholds from independent same-generating-process sample pairs and reserved separate seed streams for evaluation.
+- Completed pilot: n=250, 200 calibration and 200 evaluation replicates per condition, seed 20261125; 7 unit tests passed. Cnull FPR=4%; C6 detection: Pearson 4%, dCor 31%.
+- Recorded pilot metrics and interpretation limits in SYNTHETIC/pilot_summary.json. The larger n=500/1,000-replicate run exceeded the available execution window and was not included.
+- Synthetic indicator evaluation only. No validation of water physics; MIOD-001 physical protocol v0.1 remains unchanged.
+
 ## 2026-11-25 — MIOD-001 measurement uncertainty
 - Added `EXPERIMENTS/MIOD-001-WATER/MEASUREMENT_UNCERTAINTY.md`, a draft method note for evaluating and reporting uncertainty by directly measured channel.
 - Distinguished Type A and Type B evaluation methods; clarified individual-reading dispersion versus uncertainty of a mean.
