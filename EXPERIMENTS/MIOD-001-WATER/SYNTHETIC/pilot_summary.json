@@ -1,1 +1,20 @@
-{"status":"SYNTHETIC_INDICATOR_EVALUATION_ONLY","n":250,"replicates":200,"seed":20261125}
+{
+ "status":"SYNTHETIC_INDICATOR_EVALUATION_ONLY",
+ "parameters":{"n":250,"evaluation_replicates":200,"calibration_replicates":200,"seed":20261125},
+ "thresholds":{
+  "C3":{"pearson":0.0423393993443294,"dcor":0.04969899636422748},
+  "C4":{"pearson":0.037961719320937615,"dcor":0.04759446685338253},
+  "C5":{"pearson":0.04009794099076358,"dcor":0.04704752078340091},
+  "C6":{"pearson":0.20747644359422782,"dcor":0.06314870290987679}},
+ "cases":{
+  "C0_C1_C2":{"n":200,"pearson_detections":0,"dcor_detections":0},
+  "Cnull":{"n":200,"pearson_false_positives":8,"dcor_false_positives":8,"FPR":0.04},
+  "C3_noise_detection_rates":{"0.05":0,"0.10":0,"0.25":1,"0.50":1},
+  "C4_detection_rates":{"pearson":1,"dcor":1},
+  "C5_detection_rates":{"pearson":1,"dcor":1},
+  "C6_detection_rates":{"pearson":0.04,"dcor":0.31}},
+ "classifier_metrics":{
+  "pearson":{"TP":408,"FN":192,"FP":8,"TN":192,"FPR":0.04,"FNR":0.32,"FDR":0.019230769230769232},
+  "dcor":{"TP":462,"FN":138,"FP":8,"TN":192,"FPR":0.04,"FNR":0.23,"FDR":0.01702127659574468}},
+ "interpretation":"C3 excluded from confusion metrics; FDR depends on synthetic prevalence. No physical water inference."
+}
