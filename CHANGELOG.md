@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-25 — MIOD-001 measurement uncertainty
+- Added `EXPERIMENTS/MIOD-001-WATER/MEASUREMENT_UNCERTAINTY.md`, a draft method note for evaluating and reporting uncertainty by directly measured channel.
+- Distinguished Type A and Type B evaluation methods; clarified individual-reading dispersion versus uncertainty of a mean.
+- Added cautions for autocorrelation in time-series data, conditional resolution/specification models, calibration contributions, covariance, and uncertainty propagation.
+- Left all numerical uncertainty budgets pending identification of the apparatus, sensors, acquisition settings, and calibration evidence.
+- Marked the note DRAFT / NOT PREREGISTERED. The MIOD-001 v0.1 parent protocol remains unchanged.
+
 ## 2026-11-23 — Da Vinci Bridge research track
 - Added DB-004, the finite-group prefix-return theorem: a sequence of |G| elements in a finite group G contains a nonempty consecutive block whose ordered product is the identity.
 - Verified the argument for non-abelian groups; the proof uses prefix products, finite counting, associativity, and inverses, but not commutativity.
@@ -24,3 +31,4 @@
 - Registered three proposed hypotheses: structured error, cross-system relational invariance, and observer dependence.
 - Added the MIOD-001 water-vibration protocol design draft.
 - Explicitly marked mathematical structures and hypotheses as provisional; no confirmatory evidence is claimed.
+
