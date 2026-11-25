@@ -2,7 +2,7 @@
 
 **Status:** methodological working note; DRAFT / NOT PREREGISTERED  
 **Scope:** uncertainty estimation for each directly recorded measurement channel.  
-**Parent protocol:** \`EXPERIMENTS/MIOD-001-WATER/protocol.md\` v0.1. This note does not modify that protocol.
+**Parent protocol:** `EXPERIMENTS/MIOD-001-WATER/protocol.md` v0.1. This note does not modify that protocol.
 
 ## 1. Purpose
 
